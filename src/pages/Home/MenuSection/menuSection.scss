@@ -1,0 +1,40 @@
+.food-menu {
+    opacity: 0;
+    display: block !important;
+    animation: full-opacity-anim .3s forwards;
+
+    @keyframes full-opacity-anim {
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+h2.for-today-title {
+    @media screen and (max-width: 768px) {
+        font-size: 55px !important;
+    }
+
+    @media screen and (max-width: 425px) {
+        font-size: 40px !important;
+    }
+}
+
+span.small-add {
+    font-size: 14px;
+    cursor: pointer;
+    height: 30px !important;
+    line-height: 30px !important;
+
+    &:hover .spinner {
+        border-top-color: #fff !important;
+        border-left-color: #fff !important;
+    }
+}
+
+.spinner.spc {
+    border-top-color: #EF0132 !important;
+    border-left-color: #EF0132 !important;
+    width: 1rem !important;
+    height: 1rem !important;
+}

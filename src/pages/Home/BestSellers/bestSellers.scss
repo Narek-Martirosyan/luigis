@@ -1,0 +1,122 @@
+.story-area {
+    position: relative;
+    background: #fff;
+
+    .triangle-bottom {
+        position: relative;
+
+        &:after {
+            content: '';
+            height: 10px;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            right: 0;
+            background: url("./img/triangle_bg.png") repeat-x;
+            background-size: 26px 10px;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+        }
+    }
+
+    .triangle-up {
+        &:after {
+            content: '';
+            height: 10px;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            background: url("./img/triangle_bg.png") repeat-x;
+            background-size: 26px 10px;
+        }
+    }
+
+    .pos-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .pos-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.bg-seller {
+    background: url("./img/sellers-1-1600x1600.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: rgba(0, 0, 0, .85);
+    }
+}
+
+
+
+.seller-pizza {
+    border-radius: 8%;
+    object-fit: cover;
+}
+
+.img-parent {
+    overflow: hidden;
+    border-radius: 8%;
+    cursor: default;
+
+    .pizza-description {
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.692);
+        height: 85.3%;
+        border-radius: 8%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        opacity: 0;
+        transition: .3s;
+        overflow: hidden;
+    }
+
+    &:hover .pizza-description {
+        opacity: 1;
+    }
+}
+
+h6 {
+
+    a,
+    span {
+        color: #fff !important;
+        cursor: pointer;
+    }
+
+    &:hover a.h-white {
+        color: #fff !important;
+    }
+}
+
+h2.bestsellers-title {
+    @media screen and (max-width: 768px) {
+        font-size: 65px !important;
+    }
+
+    @media screen and (max-width: 425px) {
+        font-size: 50px !important;
+    }
+}

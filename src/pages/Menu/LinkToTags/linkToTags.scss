@@ -1,0 +1,65 @@
+.menu {
+    position: relative;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 20px;
+    padding-left: 10px;
+    font-size: 35px;
+    width: 135px;
+    border-bottom: 2px solid #EF0031;
+    border-left: 2px solid #EF0031;
+    border-top: 2px solid #EF0031;
+    background-color: aliceblue;
+
+    ::-webkit-scrollbar {
+        height: 0px;
+    }
+
+    .parent-menu {
+        position: absolute;
+        width: 15px;
+        transition: .5s;
+        overflow: hidden;
+        display: inline-block;
+        border-right: 2px solid #EF0031;
+        background-color: aliceblue;
+
+        .goTo {
+            padding: 11px 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+            transition: none;
+
+            &:hover {
+                border-bottom: 2px solid #EF0031;
+            }
+
+            @media screen and (max-width: 768px) {
+                padding: 0px 15px;
+                &:first-child {
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+
+    &:hover .parent-menu {
+        width: 1100px;
+    }
+
+    @media screen and (max-width: 1255px) {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 150px;
+
+        &:hover {
+            width: 90%;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        width: 114px;
+        font-size: 25px;
+    }
+}
+

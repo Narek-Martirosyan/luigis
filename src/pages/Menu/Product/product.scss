@@ -1,0 +1,85 @@
+.story-area {
+    position: relative;
+    background: #fff;
+}
+
+
+.seller-pizza {
+    border-radius: 8%;
+    object-fit: cover;
+}
+
+
+
+.img-parent {
+    overflow: hidden;
+    border-radius: 8%;
+    cursor: default;
+
+    .pizza-description {
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.692);
+        height: 85.3%;
+        border-radius: 8%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        opacity: 0;
+        transition: .3s;
+        overflow: hidden;
+
+        h6 {
+            color: #fff !important;
+        }
+    }
+
+    &:hover .pizza-description {
+        opacity: 1;
+    }
+}
+
+h6 {
+    &:hover a.h-white {
+        color: #fff !important;
+    }
+}
+
+.btn-parent {
+    width: fit-content;
+    margin: 0 auto;
+
+    a,
+    span {
+        color: #EF0132 !important;
+        cursor: pointer;
+
+        &:hover .spinner {
+            border-top-color: #fff !important;
+            border-left-color: #fff !important;
+        }
+    }
+
+    &:hover span {
+        color: #fff !important;
+    }
+}
+
+.h2-titles {
+    @media screen and (max-width: 768px) {
+        font-size: 55px !important;
+    }
+
+    @media screen and (max-width: 425px) {
+        font-size: 35px !important;
+    }
+}
+
+.spinner.spc {
+    border-top-color: #EF0132 !important;
+    border-left-color: #EF0132 !important;
+    width: 1rem !important;
+    height: 1rem !important;
+}

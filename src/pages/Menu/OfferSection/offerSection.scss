@@ -1,0 +1,28 @@
+.bg-seller {
+    background: url("./img/sellers-1-1600x1600.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: rgba(0, 0, 0, .85);
+    }
+}
+
+
+.offer-text {
+    @media screen and (max-width: 768px) {
+        font-size: 40px!important;
+    }
+
+    @media screen and (max-width: 425px) {
+        font-size: 25px!important;
+    }
+}

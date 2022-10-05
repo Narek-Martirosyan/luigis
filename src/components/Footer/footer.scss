@@ -1,0 +1,76 @@
+footer {
+    background: url("./img/footer_1600x800.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    font-size: 1.3em;
+    color: #FFFFFF;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: rgba(0, 0, 0, .7);
+    }
+
+    p {
+        color: #FFFFFF;
+    }
+
+    .underline-secondary {
+        color: #37B143;
+        text-decoration: underline;
+    }
+}
+
+.footer-bg-1 {
+    background-image: url("./img/footer-1.png");
+
+    &:after {
+        display: none;
+    }
+}
+
+ul.icon {
+    li {
+        span, a {
+            padding: 10px;
+            i {
+                font-size: 30px!important;
+                color: white!important;
+            }
+            
+        }
+    }
+}
+
+.color-light {
+    color: #cccccc;
+}
+
+.semi-black {
+    color: #666666;
+}
+
+.triangle-bottom{
+    position: relative;
+}
+
+.triangle-bottom:after {
+    content: '';
+    height: 10px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    background: url("./img/triangle_bg.png") repeat-x;
+    background-size: 26px 10px;
+    transform: rotate(180deg); -webkit-transform: rotate(180deg);
+}
+
+.pos-top{ position: absolute; top: 0; left: 0; right: 0;  }

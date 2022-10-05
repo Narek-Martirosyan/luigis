@@ -1,0 +1,26 @@
+.story-area {
+    position: relative;
+    background: #fff;
+
+    .story-bg-1 {
+        background: url("./img/story_bg_1.png") no-repeat center;
+        background-size: 100%;
+    }
+
+    .story-bg-2 {
+        background: url("./img/story_bg_2.png") no-repeat center;
+        background-size: 100%;
+    }
+}
+
+h2.our-story-title {
+    font-size: 70px !important;
+
+    @media screen and (max-width: 768px) {
+        font-size: 60px!important;
+    }
+
+    @media screen and (max-width: 425px) {
+        font-size: 50px!important;
+    }
+}

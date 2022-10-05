@@ -1,0 +1,22 @@
+.bg-contact {
+    background: url("./img/slider_5_1920_600.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.btnbutton {
+    &:hover {
+        color: #000 !important;
+    }
+
+    &:hover .spinner.loadcontact {
+        border-top-color: #000!important;
+        border-right-color: #000!important;
+    }
+}
+
+.sendbutton {
+    &::before {
+        content: "SEND MESSAGE";
+    }
+}
+

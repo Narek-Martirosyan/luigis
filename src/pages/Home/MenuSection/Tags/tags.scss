@@ -1,0 +1,24 @@
+ul.selecton {
+    text-align: center;
+    font-size: 1.2em;
+
+    li {
+        span {
+            padding: 15px 30px;
+            user-select: none; 
+            cursor: pointer;
+        }
+
+        span.active {
+            border-radius: 3px 3px 0 0;
+            background: #EF0031;
+            color: #FFFFFF;
+        }
+
+        &:hover span {
+            border-radius: 3px 3px 0 0;
+            background: #EF0031;
+            color: #FFFFFF;
+        }
+    }
+}

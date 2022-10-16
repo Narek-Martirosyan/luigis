@@ -43,7 +43,7 @@ export const Checkout = () => {
                 setAccept(true);
 
                 setTimeout(() => {
-                    navigate("/");
+                    navigate("/luigis");
                 }, 2000);
             }, 2000);
         } else {

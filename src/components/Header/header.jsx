@@ -52,17 +52,10 @@ export const Header = () => {
         setShowMenu(false);
     }, [pathname]);
 
-    // useEffect(() => {
-    //     if (!reduxToken) {
-    //         localStorage.removeItem("token");
-    //         navigate(pathname);
-    //     }
-    // }, []);
-
     return (
         <header>
             <div className="container">
-                <Link to="/" className="logo"><img src={logo} alt="Logo" /></Link>
+                <Link to="/luigis" className="logo"><img src={logo} alt="Logo" /></Link>
 
                 <div className="right-area">
                     {token ?
@@ -109,7 +102,7 @@ export const Header = () => {
                 <ul className={showMenu ? "main-menu visible-menu font-mountainsre" :
                     "main-menu font-mountainsre"} id="main-menu"
                 >
-                    <li><Link to="/">HOME</Link></li>
+                    <li><Link to="/luigis">HOME</Link></li>
                     <li><Link to="about_us">ABOUT US</Link></li>
                     <li><Link to="menu">MENU</Link></li>
                     <li><Link to="cart">CART</Link></li>

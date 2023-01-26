@@ -3,14 +3,13 @@ import headingLogo from './img/heading_logo.png';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { shuffle } from "../../../components/ShuffleArray";
-import { TiTickOutline } from "react-icons/ti";
 import { addToCart, removeCard } from "../../../api/products";
 import { useSelector, useDispatch } from "react-redux";
 import { changeCartCounter } from "../../../features/user/userSlice";
 
 export const BestSellers = ({ products }) => {
     const [pizza, setPizza] = useState([]);
-    const img = "https://rae-pizza-server.herokuapp.com/";
+    const img = "https://rae-pizza.onrender.com/";
     const cart = useSelector(state => state.user.cart);
     const cartCounter = useSelector(state => state.user.cartCounter);
     const dispatch = useDispatch();

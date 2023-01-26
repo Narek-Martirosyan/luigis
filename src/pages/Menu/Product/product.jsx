@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import "./product.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { changeCartCounter } from "../../../features/user/userSlice";
@@ -6,7 +6,7 @@ import { addToCart, removeCard } from "../../../api/products";
 
 export const Product = ({ products, prod1, prod2, title }) => {
     const [prodName, setProdName] = useState([]);
-    const img = "https://rae-pizza-server.herokuapp.com/";
+    const img = "https://rae-pizza.onrender.com/";
     const cart = useSelector(state => state.user.cart);
     const cartCounter = useSelector(state => state.user.cartCounter);
     const dispatch = useDispatch()
@@ -14,6 +14,7 @@ export const Product = ({ products, prod1, prod2, title }) => {
 
     useEffect(() => {
         setProdName(products?.filter(product => product.productTag === prod1 || product.productTag === prod2));
+        // eslint-disable-next-line
     }, [products]);
 
     const loaderHandler = async (e, id) => {

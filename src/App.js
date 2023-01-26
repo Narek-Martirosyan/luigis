@@ -16,12 +16,13 @@ function App() {
   const [scrollTo, setScrollTo] = useState(false);
 
   useEffect(() => {
-    console.log(123);
     getUser().then(res => dispatch(changeUserData(res?.data)))
       .catch(() => {
         !localToken && localStorage.removeItem("token");
         navigate(pathname);
       });
+
+    // eslint-disable-next-line
   }, [pathname, cartCounter]);
 
   useEffect(() => {

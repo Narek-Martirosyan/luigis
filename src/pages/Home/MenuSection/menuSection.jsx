@@ -9,7 +9,7 @@ import { addToCart, removeCard } from "../../../api/products";
 
 export const MenuSection = ({ products }) => {
     const [filteredProducts, setFilteredProducts] = useState([]);
-    const img = "https://rae-pizza-server.herokuapp.com/";
+    const img = "https://rae-pizza.onrender.com/";
     const cart = useSelector(state => state.user.cart);
     const cartCounter = useSelector(state => state.user.cartCounter);
     const dispatch = useDispatch();

@@ -3,7 +3,7 @@ import store from "../app/store";
 import { changeErrorData } from "../features/errors/errorSlice";
 
 const instance = axios.create({
-    baseURL: "https://rae-pizza-server.herokuapp.com/"
+    baseURL: "https://rae-pizza.onrender.com/"
 });
 
 instance.interceptors.response.use(response => {

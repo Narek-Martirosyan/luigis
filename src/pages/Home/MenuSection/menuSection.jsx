@@ -29,7 +29,7 @@ export const MenuSection = ({ products }) => {
             e.target.className = "spinner spc spinner-slow";
 
             const res = await addToCart(id);
-            if (res.statusText === "OK") {
+            if (res.status === 200) {
                 e.target.innerHTML = "Added"
                 dispatch(changeCartCounter(!cartCounter));
                 e.target.className = "";
@@ -47,7 +47,7 @@ export const MenuSection = ({ products }) => {
         e.target.className = "spinner spc spinner-slow";
 
         const res = await removeCard(id);
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
             e.target.innerHTML = "Add to cart"
             dispatch(changeCartCounter(!cartCounter));
             e.target.className = "";

@@ -53,7 +53,7 @@ export const Registration = ({ logIn, signUp, showRegisterHandler, showLoginHand
         setShowLoader(true);
         const res = await registration(registerData);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
             setShowLoader(false);
             dispatch(changeUserData(res.data));
             showRegisterHandler();
@@ -88,8 +88,9 @@ export const Registration = ({ logIn, signUp, showRegisterHandler, showLoginHand
 
         if (loginData.usermail && loginData.password) {
             const res = await loginUser(loginData);
+            console.log(res);
 
-            if (res.statusText === "OK") {
+            if (res.status === 200) {
                 setShowLoader(false);
                 dispatch(changeUserData(res.data));
                 showLoginHandler();

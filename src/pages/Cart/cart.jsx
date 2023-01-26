@@ -21,7 +21,7 @@ export const Cart = () => {
         e.target.className = "spinner cart spinner-slow";
         const res = await removeCard(id);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
             dispatch(changeCartCounter(!cartcounter));
             e.target.className = "";
         }

@@ -88,7 +88,6 @@ export const Registration = ({ logIn, signUp, showRegisterHandler, showLoginHand
 
         if (loginData.usermail && loginData.password) {
             const res = await loginUser(loginData);
-            console.log(res);
 
             if (res.status === 200) {
                 setShowLoader(false);
